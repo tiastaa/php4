@@ -27,11 +27,11 @@ class Repository
     public function updateCompetitor($array)
     {
         $this->dbh->query('UPDATE Competitors SET ' .
-            'name = ' . $array['name'] . ', ' .
-            'sex = ' . $array['sex'] . ', ' .
+            'name ="' . $array['name'] . '", ' .
+            'sex = "' . $array['sex'] . '", ' .
             'age = ' . $array['age'] . ', ' .
-            'country = ' . $array['country'] . ' , ' .
-            'marks = ' . $array['marks'] . ' ' .
+            'country = "' . $array['country'] . '" , ' .
+            'marks = "' . $array['marks'] . '"' .
             'WHERE id = ' . $array['id']);
     }
 
